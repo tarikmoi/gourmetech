@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href=".css/style.css">
+</head>
+<body>
+<header>
+    <div>
+        <img src="" alt="Logo GourmeTech">
+        <h1>GourmeTech</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index">Accueil</a></li>
+            <li><a href="favoris">Mes favoris</a></li>
+            <li><a href="ajouter-recette">Ajouter une recette</a></li>
+            <li><a href="a-propos">À propos</a></li>
+        </ul>
+    </nav>
+    <button id="theme-toggle">🌙</button>
+</header>
+
+<main>
+    <section>
+        <input type="text" id="search" placeholder="Rechercher une recette...">
+        <button>Rechercher</button>
+        <fieldset>
+            <legend>Catégorie</legend>
+            <label><input type="checkbox" value="entrée"> Entrée</label>
+            <label><input type="checkbox" value="plat"> Plat</label>
+            <label><input type="checkbox" value="dessert"> Dessert</label>
+        </fieldset>
+        <fieldset>
+            <legend>Temps de préparation</legend>
+            <label><input type="radio" name="temps" value="rapide"> Rapide (-30 min)</label>
+            <label><input type="radio" name="temps" value="moyen"> Moyen (30-60 min)</label>
+            <label><input type="radio" name="temps" value="long"> Long (+60 min)</label>
+        </fieldset>
+        <fieldset>
+            <legend>Difficulté</legend>
+            <label><input type="radio" name="difficulte" value="facile"> Facile</label>
+            <label><input type="radio" name="difficulte" value="moyen"> Moyen</label>
+            <label><input type="radio" name="difficulte" value="difficile"> Difficile</label>
+        </fieldset>
+    </section>
+    
+    <section>
+        <article>
+            <img src="asset/salade marocaine.jpeg" alt="salade marocaine">
+            <h2>salade marocaine</h2>
+            <div>
+                <span>entrée</span>
+                <span>15min</span>
+                <span>rapide</span>
+            </div>
+            <button>Voir la recette</button>
+        </article>
+        <article>
+            <img src="asset/tajine.jpeg" alt="tajine">
+            <h2>tajine</h2>
+            <div>
+                <span>Plat</span>
+                <span>1h30</span>
+                <span>difficile</span>
+            </div>
+            <button>Voir la recette</button>
+        </article>
+        <article>
+            <img src="asset/crepes marocaine.jpeg" alt="crepe marocaine">
+            <h2>crepes marocaine</h2>
+            <div>
+                <span>dessert</span>
+                <span>40min</span>
+                <span>Moyen</span>
+            </div>
+            <button>Voir la recette</button>
+        </article>
+    </section>
+</main>
+
+<footer>
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="favoris.html">Mes favoris</a></li>
+            <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+            <li><a href="a-propos.html">À propos</a></li>
+        </ul>
+    </nav>
+    <p>&copy; 2025 GourmeTech - Tous droits réservés</p>
+</footer>
+</body>
+</html>
+
