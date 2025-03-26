@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - GourmeTech</title>
+    <link rel="stylesheet" href=".css/normalizeperso.css">
+    <link rel="stylesheet" href=".css/apropos.css">
+    
+</head>
+<body>
+    <header>
+        <div>
+            <img src="asset/logo.png" alt="Logo GourmeTech">
+            <h1>GourmeTech</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="favoris.html">Mes favoris</a></li>
+                <li><a href="a-propos.html">À propos</a></li>
+                <li><a href="ajouter-recette.html">ajouter une recette</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>À propos de GourmeTech</h2>
+            <p>GourmeTech est une application dédiée à la cuisine, offrant une variété de recettes avec des filtres pour faciliter la recherche. Vous pouvez enregistrer vos recettes favorites et les retrouver à tout moment. Le site vous permet aussi de partager vos propres recettes avec la communauté.</p>
+        </section>
+
+        <section>
+            <h3>Formulaire de contact</h3>
+            <form >
+                <label for="name">Nom :</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email :</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message :</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+
+        <section id="faq">
+            <h3>FAQ</h3>
+            <div class="faq-item">
+                <button class="faq-question">Comment ajouter une recette ?</button>
+                <div class="faq-answer">
+                    <p>Pour ajouter une recette, vous devez vous rendre sur la page "Ajouter une recette", remplir le formulaire et soumettre votre recette.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">Comment gérer mes favoris ?</button>
+                <div class="faq-answer">
+                    <p>Vous pouvez ajouter une recette à vos favoris en cliquant sur l'icône en forme de cœur à côté de chaque recette. Les recettes ajoutées seront accessibles depuis la page "Mes favoris".</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GourmeTech - Tous droits réservés</p>
+    </footer>
+</body>
+</html>
