@@ -18,7 +18,7 @@
         </div>
         <nav>
           <ul class="menu-nav">
-            <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html" class="acceuil">Accueil</a></li>
             <li><a href="favoris.html">Mes favoris</a></li>
             <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
             <li><a href="a-propos.html">À propos</a></li>
@@ -26,13 +26,13 @@
         </nav>
         <button id="theme-toggle">🌙</button>
         <div class="logo">
-          <img src="asset/burger.png" alt="Logo GourmeTech" />
+          <img src="asset/burger.png" class="burger" />
         </div>
         
       </header>
 
-      
-        <section>
+      <section>
+          <div class="detail-menu">
           <input
             type="text"
             id="search"
@@ -40,14 +40,17 @@
           />
           <button class="nav-rechercher">Rechercher</button>
           <fieldset>
-            <div class="detail-recette">
+            
             <legend>Catégorie</legend>
-            <label><input type="checkbox" value="entrée" /> Entrée</label>
-            <label><input type="checkbox" value="plat" /> Plat</label>
-            <label><input type="checkbox" value="dessert" /> Dessert</label>
+            <div class="detail-type-recette">
+              <label ><input type="checkbox" value="entrée" /> Entrée</label>
+              <label><input type="checkbox" value="plat" /> Plat</label>
+              <label><input type="checkbox" value="dessert" /> Dessert</label>
+            </div>
           </fieldset>
           <fieldset>
             <legend>Temps de préparation</legend>
+            <div class="detail-temps">
             <label
               ><input type="checkbox" name="temps" value="rapide" /> Rapide (-30
               min)</label
@@ -60,70 +63,74 @@
               ><input type="checkbox" name="temps" value="long" /> Long (+60
               min)</label
             >
+          </div>
           </fieldset>
           <fieldset>
             <legend>Difficulté</legend>
-            <label
-              ><input type="checkbox" name="difficulte" value="facile" />
-              Facile</label
-            >
-            <label
-              ><input type="checkbox" name="difficulte" value="moyen" />
-              Moyen</label
-            >
-            <label
-              ><input type="checkbox" name="difficulte" value="difficile" />
-              Difficile</label
-            >
-          </div>
-          </fieldset>
-        </section>
-
-        <section>
-          <article>
-              <img src="asset/salade marocaine.jpeg" alt="salade marocaine" />
-              <h2>salade marocaine</h2>
-              <div class="bouttons">
-                <span class="variete-menu">entrée</span>
-                <span class="temps">15min</span>
-                <span class="difficulte">facile</span>
+            <div class="detail-difficulte">
+              <label
+                ><input type="checkbox" name="difficulte" value="facile" />
+                Facile</label
+              >
+              <label
+                ><input type="checkbox" name="difficulte" value="moyen" />
+                Moyen</label
+              >
+              <label
+                ><input type="checkbox" name="difficulte" value="difficile" />
+                Difficile</label>
               </div>
-              <button>Voir la recette</button>
-          </article>
-          <article>
-            <img src="asset/tajine.jpeg" alt="tajine" />
-            <h2>tajine</h2>
-            <div class="bouttons">
-                <span class="variete-menu">plat</span>
-                <span class="temps">1h30</span>
-                <span class="difficulte">difficile</span>
-              </div>
-              <button>Voir la recette</button>
-          </article>
-          <article>
-            <img src="asset/crepes marocaine.jpeg" alt="crepe marocaine" />
-            <h2>crepes marocaine</h2>
-            <div class="bouttons">
-
-              <span class="variete-menu">dessert</span>
-              <span class="temps">40min</span>
-              <span class="difficulte">Moyen</span>
             </div>
-            <button>Voir la recette</button>
-          </article>
-        </section>
+            </fieldset>
+          </div>
+          </section>
 
-      <footer>
-        <nav>
-          <ul class="menu-nav">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="favoris.html">Mes favoris</a></li>
-            <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
-            <li><a href="a-propos.html">À propos</a></li>
-          </ul>
-        </nav>
-        <p>&copy; 2025 GourmeTech-Tous droits réservés</p>
-      </footer>
-    </div>
-  </body>
-</html>
+          <section class="contenu-recette">
+            <article class="menu">
+                <img src="asset/salade marocaine.jpeg" alt="salade marocaine" />
+                <h2>salade marocaine</h2>
+                <div class="bouttons">
+                  <span class="variete-menu">entrée</span>
+                  <span class="temps">15min</span>
+                  <span class="difficulte">facile</span>
+                </div>
+                <button>Voir la recette</button>
+            </article>
+            <article>
+              <img src="asset/tajine.jpeg" alt="tajine" />
+              <h2>tajine</h2>
+              <div class="bouttons">
+                  <span class="variete-menu">plat</span>
+                  <span class="temps">1h30</span>
+                  <span class="difficulte">difficile</span>
+                </div>
+                <button>Voir la recette</button>
+            </article>
+            <article>
+              <img src="asset/crepes marocaine.jpeg" alt="crepe marocaine" />
+              <h2>crepes marocaine</h2>
+              <div class="bouttons">
+  
+                <span class="variete-menu">dessert</span>
+                <span class="temps">40min</span>
+                <span class="difficulte">Moyen</span>
+              </div>
+              <button>Voir la recette</button>
+            </article>
+          </section>
+  
+        <footer>
+          <nav>
+            <ul class="menu-nav">
+              <li><a href="index.html">Accueil</a></li>
+              <li><a href="favoris.html">Mes favoris</a></li>
+              <li><a href="ajouter-recette.html">Ajouter une recette</a></li>
+              <li><a href="a-propos.html">À propos</a></li>
+            </ul>
+          </nav>
+          <p>&copy; 2025 GourmeTech-Tous droits réservés</p>
+        </footer>
+      </div>
+    </body>
+  </html>
+

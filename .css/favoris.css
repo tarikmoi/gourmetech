@@ -1,0 +1,24 @@
+:root {
+    --primary-color: #E67F22;
+    --secondary-color: #47C575;
+    --third-color: #5FA0C2;
+    --white-color: #FFFFFF;
+    --gray-color: #F7F4ED;
+    --orange-color: #F8D350;
+    --police-color: #adb0ad;
+    --title-color: #858384;
+    --font-family: Arial, sans-serif;
+}
+
+h1{
+    color: var(--primary-color);
+    margin-left: 80px;
+    margin-top: 50px;
+
+    
+}
+.Logo-GourmeTech{
+    margin-top: 50px;
+    margin-left: 30px;
+    width: 50px;
+}

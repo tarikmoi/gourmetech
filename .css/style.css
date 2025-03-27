@@ -68,6 +68,11 @@ h1{
 h2{
     color: var(--title-color);
 }
+.nav-rechercher{
+    margin-left: 20px;
+    margin-top: 10px;
+       
+}
 
 nav ul {
     list-style: none;
@@ -75,6 +80,7 @@ nav ul {
     gap: 10px;
     padding: 0;
     margin: 0;
+    
 }
 
 nav a {
@@ -105,6 +111,27 @@ section:first-of-type {
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
+legend{
+   
+}
+.detail-type-recette{
+    display: flex;
+    flex-direction: column;
+}
+.detail-temps{
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-menu{
+    margin: 70px;
+    margin-bottom: 20px;
+}
+.detail-difficulte{
+    display: flex;
+    flex-direction: column;
+}
+
 
 input[type="text"] {
     width: 100%;
@@ -225,21 +252,86 @@ footer {
     text-align: center;
 }
 
-/* Responsive Design */
-/* @media (min-width: 768px) {
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        gap: 15px;
+/* Responsive pour les écrans à partir de 768px (tablettes) */
+@media (min-width: 768px) {
+    .container {
+        width: 70%;
     }
-    
+
+    .menu-nav {
+        display: flex;
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+        
+    }
+
+    .nav-rechercher {
+        font-size: 12px;
+        width: 250px;
+        height: auto;
+    }
+
     section:last-of-type {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    article div span {
+        font-size: 1rem;
+    }
 }
 
+/* Responsive pour les écrans à partir de 1024px (ordinateurs) */
 @media (min-width: 1024px) {
+    .container {
+        width: 50%;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .logo-title-img {
+        margin-left: 20px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+    .burger{
+        display: none;
+    }
+
+    .nav-rechercher {
+        font-size: 14px;
+        width: 300px;
+    }
+    .menu-nav{
+        display: flex;
+    }
+    .acceuil{
+        color: var(--primary-color);
+    }
+
     section:last-of-type {
         grid-template-columns: repeat(3, 1fr);
     }
-} */
+
+    article {
+        padding: 20px;
+    }
+
+    article h2 {
+        font-size: 1.4rem;
+    }
+
+    article div span {
+        font-size: 1.1rem;
+    }
+}
+
+ 
+ 

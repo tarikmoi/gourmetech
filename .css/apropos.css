@@ -1,225 +1,150 @@
-:root{
-    --primary-color: #E67F22;
-    --secondary-color: #47C575;
-    --third-color: #5FA0C2;
-    --white-color: #FFFFFF;
-    --gray-color: #F7F4ED;
-    --orange-color: #F8D350;
-    --police-color: #adb0ad;
-    --title-color: #858384;
-    --font-family: Arial, sans-serif;
+/* Définition des variables de couleur */
+:root {
+  --primary-color: #E67F22;
+  --secondary-color: #47C575;
+  --third-color: #5FA0C2;
+  --white-color: #FFFFFF;
+  --gray-color: #F7F4ED;
+  --orange-color: #F8D350;
+  --police-color: #adb0ad;
+  --title-color: #858384;
+  --font-family: Arial, sans-serif;
 }
 
-
-
-/* Styles généraux - Mobile First */
-
-
-
+/* Réinitialisation de base */
 body {
-    display: flex;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    background-color: var(--white-color);
-    margin: 0;
-    padding: 0;
-    color:var(--police-color);
-    display: block;
+  font-family: var(--font-family);
+  background-color: var(--gray-color);
+  color: var(--police-color);
+  margin: 0;
+  padding: 0;
+  justify-content: center;
 }
 
-.container{
-    width: 30%;
-}
-
-legend{
-    color: var(--title-color);
-}
-/* Header */
 header {
-    background-color:var(--white-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: var(--gray-color);
+  color: var(--white-color);
 }
-
-header div {
-    display: flex;
-    align-items: center;
-}
-
-header img {
-    height: 40px;
-    margin-right: 10px;
-}
-.logo-title-img{
-   border-radius: 50%;
-   margin-left: 50px;
-}
-.logo-img{
-    height: 16px;
-    width: 16px;
-}
-   
 h1{
-    color: var(--primary-color);
-   font-size: 22px;
+  color: var(--primary-color);
 }
-h2{
-    color: var(--title-color);
+.logo img {
+  width: 50px;
+  height: auto;
 }
 
 nav ul {
-    list-style: none;
-    flex-direction: column;
-    gap: 10px;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
 }
 
-nav a {
-    text-decoration: none;
-    color: var(--police-color);
-    font-weight: bold;
-    padding: 10px;
-    display: block;
-}
-.menu-nav{
-    display: flex;
-    flex-direction: row;
-    display: none;
+nav ul li {
+  display: inline;
+  display: none;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--orange-color);
+}
+
+/* Bouton thème */
 #theme-toggle {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: white;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
-/* Recherche et filtres */
-section:first-of-type {
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+/* Section principale */
+main {
+  padding: 20px;
 }
 
-input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    
+h2, h3 {
+  color: var(--title-color);
 }
 
-button {
-    background-color: var(--primary-color) ;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
-}
-.nav-rechercher{
-font-size: 8px;
-  gap: 10px;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  width: 185px;
-  height: 15px;
-  text-align: center;
-  border-spacing: 10px;
-  
+/* Formulaire */
+form {
+  background: var(--white-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
 }
 
-button:hover {
-    background-color: var(--primary-color);
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
 }
 
-fieldset {
-    border: none;
-    margin: 10px 0;
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid var(--police-color);
+  border-radius: 5px;
 }
 
-legend {
-    font-weight: bold;
+button[type="submit"] {
+  background: var(--secondary-color);
+  color: var(--white-color);
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  display: block;
+  width: 100%;
 }
 
-/* Section des recettes */
-section:last-of-type {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
+button[type="submit"]:hover {
+  background: var(--third-color);
 }
 
-article {
-    background: white;
-   
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
+/* FAQ */
+.faq-item {
+  background: var(--white-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
 
-article img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px 10px 0 0;
+.faq-question {
+  background: none;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
 }
 
-article h2 {
-    font-size: 1.2rem;
-    margin: 10px 0;
+.faq-answer {
+  display: none;
+  margin-top: 10px;
 }
 
-article div {
-    display: flex;
-    justify-content: center;
-    gap: 5px;
-    margin-bottom: 10px;
-}
-
-article div span {
-    color: var(--white-color);
-    padding: 3px 7px;
-    border-radius: 15px;
-    font-size: 0.9rem;
-    height: 1.5rem ;
-    
-    display: flex;
-    width: 33%;
-    
-}
-/* couleur des bouttons */
-.variete-menu{
-    display: flex;
-    background-color: var(--primary-color);
-    text-align: center;
-    align-items: center;
-}
-
-.temps{
-    background-color: var(--secondary-color);
-    text-align: center;
-    align-items: center;
-}
-.difficulte{
-    background-color: var(--third-color);
-    text-align: center;
-    align-items: center;
-}
-
-.bouttons{
-    display: flex;
-    justify-content: space-around;
-}
-
-/* Footer */
+/* Pied de page */
 footer {
-    background-color: var(--white-color);
-    color: var(--police-color);
-    padding: 10px;
-    margin-top: 20px;
-    text-align: center;
+  text-align: center;
+  padding: 10px;
+  background: var(--primary-color);
+  color: var(--white-color);
+  margin-top: 20px;
+}
