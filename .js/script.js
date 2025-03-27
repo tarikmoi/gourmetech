@@ -1,6 +1,16 @@
-//declaration de constante du bouton theme toogle et de la constante corps
-const corps = document.body;
+//Déclaration de constante du bouton theme toogle et de la constante body
+const body = document.body;
 const boutonTheme = document.querySelector("#theme-toggle");
+
+//Thème est déjà stocké dans localStorage
+const themeEnregistre = localStorage.getItem("theme");
+// Applique le thème stocké si disponible
+if (themeEnregistre) {
+    body.classList.add(themeEnregistre);
+    boutonTheme.classList.add(themeEnregistre);
+}
+
+/** Fonction qui ... **/
 document.addEventListener("DOMContentLoaded", function () {
     const casesACocher = document.querySelectorAll("input[type='checkbox']");
     const champRecherche = document.querySelector("#search");
@@ -37,29 +47,34 @@ document.addEventListener("DOMContentLoaded", function () {
     champRecherche.addEventListener("input", filtrerRecettes);
 });
 
+/** Fonction qui recherche les recettes ... **/
 document.addEventListener("DOMContentLoaded", function () {
     const casesACocher = document.querySelectorAll("input[type='checkbox']");
     const champRecherche = document.querySelector("#search");
     const recettes = document.querySelectorAll(".contenu-recette article");
 
     // Appliquer le thème stocké
-    const themeActuel = localStorage.getItem("theme") || "clair";
-    if (themeActuel === "sombre") {
-        corps.classList.add("sombre");
+    const themeActuel = localStorage.getItem("theme") || "light";
+    if (themeActuel === "dark") {
+        body.classList.add("dark");
         boutonTheme.textContent = "☀️";
         
 }})
-boutonTheme.addEventListener("click", function () {
-    if (corps.classList.contains("sombre")) {
-        corps.classList.remove("sombre");
-        localStorage.setItem("theme", "clair");
-        boutonTheme.textContent = "🌙";
-    } else {
-        corps.classList.add("sombre");
-        localStorage.setItem("theme", "sombre");
+
+// Change le thème lorsque l'utilisateur clique sur le bouton
+boutonTheme.addEventListener("click", () => {
+    if (body.classList.contains("light")) {
+        body.classList.replace("light", "dark");
+        boutonTheme.classList.replace("light", "dark");
         boutonTheme.textContent = "☀️";
+      	// Sauvegarde le thème sombre
+        localStorage.setItem("theme", "dark");  
+    } else {
+        body.classList.replace("dark", "light");
+        boutonTheme.classList.replace("dark", "light");
+        boutonTheme.textContent = "🌙";
+      	// Sauvegarde le thème clair
+        localStorage.setItem("theme", "light");  
     }
 });
 
-    // Changement de thème et stockage
-    
